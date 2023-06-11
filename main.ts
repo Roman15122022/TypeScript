@@ -50,3 +50,42 @@ const printMsg2 = function (msg2: string): void { //expression
 const printMsg3 = (msg3: string): void => {
     console.log(msg3);
 }
+
+const nestedArr:(number[] | string[])[] = [[1,2,3], ['a','d','c']];
+/*Union types*/
+
+let strorNum:string | number;
+strorNum = 'd';
+strorNum = 1;
+/*strorNum = false*/ //err
+
+/*Type Aliases*/
+type NumberOrBoolean = number | boolean;
+let myValue: NumberOrBoolean;
+myValue = 300;
+myValue = false;
+/*myValue = 'as'*/ //err
+
+/*crossover*/
+type A = {
+    propA: string;
+}
+type B = {
+    propB: number;
+}
+type C = A & B;
+const myObj: C = {
+    propA: 'lwsal',
+    propB: 42,
+}
+
+/*-------*/
+type OnOff = 1 | 0;
+const checkSignal = (signal: OnOff) => {
+    if (signal === 1) return 'Device enabled!';
+    return "Device disabled!";
+}
+checkSignal(1);
+/*checkSignal(2);*/ //err
+
+/*ENUMS*/
