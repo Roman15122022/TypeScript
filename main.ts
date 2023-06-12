@@ -89,3 +89,8 @@ checkSignal(1);
 /*checkSignal(2);*/ //err
 
 /*ENUMS*/
+enum DeviceStates {
+    ENABLED,
+    DISABLED,
+    BROKEN,
+}
