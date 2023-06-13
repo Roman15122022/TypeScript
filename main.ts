@@ -90,7 +90,69 @@ checkSignal(1);
 
 /*ENUMS*/
 enum DeviceStates {
-    ENABLED,
-    DISABLED,
-    BROKEN,
+    ENABLED, //0
+    DISABLED,//1
+    BROKEN,//2
 }
+
+console.log(DeviceStates.ENABLED);
+console.log(DeviceStates.DISABLED);
+console.log(DeviceStates.BROKEN);
+
+const {ENABLED, DISABLED, BROKEN} = DeviceStates;
+
+console.log(ENABLED);
+console.log(DISABLED);
+console.log(BROKEN);
+
+enum Phone {
+    six = 6,
+    seven, //7
+    eight, //8
+}
+
+enum Heterogen{
+    word = 'asa',
+    notWord = 2,
+    aasas,//3
+}
+
+enum FileAcces {
+    //constatnt members
+    None,
+    Read = 1 << 1,
+    Write = 1 << 2,
+    ReadWrite = Read | Write,
+    //computer member
+    G = '123'.length,
+}
+
+enum MyEnum1 {
+    One,
+    Two,
+}
+
+enum MyEnum2 {
+    First = MyEnum1.One,
+    Second = MyEnum1.Two,
+}
+
+interface Parent {
+    name: string;
+    child: {
+        age: number;
+        gender: string;
+    };
+}
+
+const person: Parent = {
+    name: "John",
+    child: {
+        age: 5,
+        gender: "Male",
+    },
+};
+
+console.log(person.name);
+console.log(person.child.age);
+console.log(person.child.gender);
