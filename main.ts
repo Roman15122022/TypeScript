@@ -156,3 +156,26 @@ const person: Parent = {
 console.log(person.name);
 console.log(person.child.age);
 console.log(person.child.gender);
+
+/*Classes*/
+interface IPerson {
+    name: string;
+    age: number;
+}
+class Person implements IPerson{
+    name: string;
+    age: number;
+    constructor(name = "Anonimus", age = 0) {
+        this.name = name;
+        this.age = age;
+    }
+
+    sayHi(): void {
+        console.log(`Hello ${this.name}!`);
+    }
+}
+
+const person2 = new Person();
+const person3 = new Person("Roma", 18);
+
+person3.sayHi();
