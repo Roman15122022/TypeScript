@@ -186,3 +186,27 @@ person3.sayHi();
 abstract class  AbstrGreeter {
     abstract sayHi(): void;
 }
+
+class MyGreeter extends AbstrGreeter{
+   sayHi() {
+       console.log("Hi");
+   }
+}
+
+//Classes Member visibility
+class Car {
+    public sayHi(){
+        console.log('Hi');
+    }
+    private sayBye(){
+        console.log('Bye');
+    }
+    protected ph(){
+        console.log('ph');
+    }
+}
+//generic
+
+function identity <T> (value: T): T {
+    return value;
+}
