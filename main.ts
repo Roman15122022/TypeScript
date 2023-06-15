@@ -173,9 +173,16 @@ class Person implements IPerson{
     sayHi(): void {
         console.log(`Hello ${this.name}!`);
     }
+    sayGoodBye = () => {
+        console.log(`Good Bye ${this.name}`);
+    }
 }
 
 const person2 = new Person();
 const person3 = new Person("Roma", 18);
 
 person3.sayHi();
+//Abstract class
+abstract class  AbstrGreeter {
+    abstract sayHi(): void;
+}
